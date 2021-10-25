@@ -1,0 +1,604 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+body{
+    background-image:url(https://static1.bigstockphoto.com/5/3/3/large1500/335448619.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Poppins;
+}
+.first{
+    background-color: aqua;
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 80px;
+}
+.first img{
+    height: 180px;
+    width: 210px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.first h3{
+    color: black;
+    margin-left: 220px;
+    margin-top: -160px;
+}
+.first a{
+    margin-left: 220px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.first a:hover{
+    color: orange;
+}
+.second a:hover{
+    color: orange;
+}
+.second{
+    background-color: #FFDEFA;
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 60px;
+}
+.second img{
+    height: 180px;
+    width: 210px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.second h3{
+    color: black;
+    margin-left: 220px;
+    margin-top: -160px;
+}
+.second a{
+    margin-left: 220px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.three{
+    background-color: rgb(29, 147, 216);
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 60px;
+}
+.three img{
+    height: 180px;
+    width: 210px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.three h3{
+    color: black;
+    margin-left: 220px;
+    margin-top: -160px;
+}
+.three a{
+    margin-left: 220px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.three a:hover{
+    color: orange;
+}
+.four{
+    background-color: rgba(212, 161, 67, 0.74);
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 60px;
+}
+.four img{
+    height: 180px;
+    width: 210px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.four h3{
+    color: black;
+    margin-left: 220px;
+    margin-top: -160px;
+}
+.four a{
+    margin-left: 220px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.four a:hover{
+    color: orange;
+}
+.five{
+    background-color: forestgreen;
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 60px;
+}
+.five img{
+    height: 180px;
+    width: 250px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.five h3{
+    color: black;
+    margin-left: 270px;
+    margin-top: -160px;
+}
+.five a{
+    margin-left: 270px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.five a:hover{
+    color: orange;
+}
+.six{
+    background-color: bisque;
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 60px;
+}
+.six img{
+    height: 180px;
+    width: 250px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.six h3{
+    color: black;
+    margin-left: 270px;
+    margin-top: -160px;
+}
+.six a{
+    margin-left: 270px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.six a:hover{
+    color: orange;
+}
+.seven{
+    background-color: burlywood;
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 60px;
+}
+.seven img{
+    height: 180px;
+    width: 250px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.seven h3{
+    color: black;
+    margin-left: 270px;
+    margin-top: -160px;
+}
+.seven a{
+    margin-left: 270px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.seven a:hover{
+    color: orange;
+}
+.eight{
+    background-color: brown;
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 60px;
+}
+.eight img{
+    height: 180px;
+    width: 250px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.eight h3{
+    color: black;
+    margin-left: 270px;
+    margin-top: -160px;
+}
+.eight a{
+    margin-left: 270px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.eight a:hover{
+    color: orange;
+}
+.nine{
+    background-color: beige;
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 60px;
+}
+.nine img{
+    height: 180px;
+    width: 250px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.nine h3{
+    color: black;
+    margin-left: 270px;
+    margin-top: -160px;
+}
+.nine a{
+    margin-left: 270px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.nine a:hover{
+    color: orange;
+}
+.ten{
+    background-color: rgb(255, 0, 157);
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 90px;
+}
+.ten img{
+    height: 180px;
+    width: 250px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.ten h3{
+    color: black;
+    margin-left: 270px;
+    margin-top: -160px;
+}
+.ten a{
+    margin-left: 270px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.ten a:hover{
+    color: orange;
+}
+.eleven{
+    background-color: rgb(255, 145, 0);
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 60px;
+}
+.eleven img{
+    height: 180px;
+    width: 250px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.eleven h3{
+    color: black;
+    margin-left: 270px;
+    margin-top: -160px;
+}
+.eleven a{
+    margin-left: 270px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.eleven a:hover{
+    color: orange;
+}
+.twelve{
+    background-color: teal;
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 60px;
+}
+.twelve img{
+    height: 180px;
+    width: 250px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.twelve h3{
+    color: black;
+    margin-left: 270px;
+    margin-top: -160px;
+}
+.twelve a{
+    margin-left: 270px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.twelve a:hover{
+    color: orange;
+}
+.thirteen{
+    background-color: rgb(65, 248, 41);
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 60px;
+}
+.thirteen img{
+    height: 180px;
+    width: 250px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.thirteen h3{
+    color: black;
+    margin-left: 270px;
+    margin-top: -160px;
+}
+.thirteen a{
+    margin-left: 270px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.thirteen a:hover{
+    color: orange;
+}
+.forteen{
+    background-color: thistle;
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 60px;
+}
+.forteen img{
+    height: 180px;
+    width: 250px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.forteen h3{
+    color: black;
+    margin-left: 270px;
+    margin-top: -160px;
+}
+.forteen a{
+    margin-left: 270px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.forteen a:hover{
+    color: orange;
+}
+.fifteen{
+    background-color: cornflowerblue;
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 60px;
+}
+.fifteen img{
+    height: 180px;
+    width: 250px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.fifteen h3{
+    color: black;
+    margin-left: 270px;
+    margin-top: -160px;
+}
+.fifteen a{
+    margin-left: 270px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.fifteen a:hover{
+    color: orange;
+}
+.sixteen{
+    background-color: rgb(55, 30, 197);
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 60px;
+}
+.sixteen img{
+    height: 180px;
+    width: 250px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.sixteen h3{
+    color: black;
+    margin-left: 270px;
+    margin-top: -160px;
+}
+.sixteen a{
+    margin-left: 270px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.sixteen a:hover{
+    color: orange;
+}
+.seventeen{
+    background-color: rgb(255, 0, 43);
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 60px;
+}
+.seventeen img{
+    height: 180px;
+    width: 250px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.seventeen h3{
+    color: black;
+    margin-left: 270px;
+    margin-top: -160px;
+}
+.seventeen a{
+    margin-left: 270px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.seventeen a:hover{
+    color: orange;
+}
+.eighteen{
+    background-color: rgb(233, 229, 31);
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 60px;
+}
+.eighteen img{
+    height: 180px;
+    width: 250px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.eighteen h3{
+    color: black;
+    margin-left: 270px;
+    margin-top: -160px;
+}
+.eighteen a{
+    margin-left: 270px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.eighteen a:hover{
+    color: orange;
+}
+.nineteen{
+    background-color: rgb(34, 216, 80);
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 60px;
+}
+.nineteen img{
+    height: 180px;
+    width: 250px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.nineteen h3{
+    color: black;
+    margin-left: 270px;
+    margin-top: -160px;
+}
+.nineteen a{
+    margin-left: 270px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.nineteen a:hover{
+    color: orange;
+}
+.twenty{
+    background-color: rgb(226, 21, 192);
+    width: 40%;
+    height: 25%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 60px;
+}
+.twenty img{
+    height: 180px;
+    width: 250px;
+    margin-left: -1px;
+    border-radius: 10px;
+    margin-top: 1.1px;
+}
+.twenty h3{
+    color: black;
+    margin-left: 270px;
+    margin-top: -160px;
+}
+.twenty a{
+    margin-left: 270px;
+    text-decoration: none;
+    color: rgb(235, 37, 192);
+    font-size: 20px;
+}
+.twenty a:hover{
+    color: orange;
+}
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #30ff00);
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, #00c6ff);
+  }
+  header h1{
+      margin-top: 30px;
+      text-align: center;
+      color: rgb(115, 241, 143);
+  }

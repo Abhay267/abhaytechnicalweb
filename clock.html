@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>dynamic clock source code</title>
+    <link rel="stylesheet" href="clock.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="icon" href="favicon-32x32.png">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="heading">
+    <h2>Source Code for Dynamic Clock</h2>
+  </div>
+  <div class="img">
+    <img src="clock.jpg" alt="">
+  </div>
+  <div class="text-boxes">
+    <div class="text-box HTMLBox">
+      <div class="topic">HTML Code:</div>
+      <textarea id="HTMLBox" readonly >
+        <!DOCTYPE html>
+        <!-- Created by AbhayTechnical-->
+        <html lang="en" dir="ltr">
+          <head>
+            <meta charset="UTF-8">
+            <title> Dynamic Digital Clock | Abhaytechnical </title>
+            <link rel="stylesheet" href="style.css">
+            <!-- Fontawesome CDN Link -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+           </head>
+        <body>
+          <section>
+            <div class="container">
+              <div class="icons">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+              </div>
+              <div class="time">
+                <div class="time-colon">
+                  <div class="time-text">
+                    <span class="num hour_num">08</span>
+                    <span class="text">Hours</span>
+                  </div>
+                  <span class="colon">:</span>
+                </div>
+                <div class="time-colon">
+                  <div class="time-text">
+                    <span class="num min_num">45</span>
+                    <span class="text">Minutes</span>
+                  </div>
+                  <span class="colon">:</span>
+                </div>
+                <div class="time-colon">
+                  <div class="time-text">
+                    <span class="num sec_num">06</span>
+                    <span class="text">Seconds</span>
+                  </div>
+                  <span class="am_pm">AM</span>
+                </div>
+              </div>
+            </div>
+        
+          </section>
+        
+          <script>
+          let section = document.querySelector("section"),
+          icons = document.querySelector(".icons");
+        
+          icons.onclick = ()=>{
+            section.classList.toggle("dark");
+          }
+        
+          // creating a function and calling it in every seconds
+          setInterval(()=>{
+        
+            let date = new Date(),
+            hour = date.getHours(),
+            min = date.getMinutes(),
+            sec = date.getSeconds();
+        
+            let d;
+            d = hour < 12 ? "AM" : "PM"; //if hour is smaller than 12, than its value will be AM else its value will be pm
+            hour = hour > 12 ? hour - 12 : hour; //if hour value is greater than 12 than 12 will subtracted ( by doing this we will get value till 12 not 13,14 or 24 )
+            hour = hour == 0 ? hour = 12 : hour; // if hour value is  0 than it value will be 12
+        
+            // adding 0 to the front of all the value if they will less than 10
+            hour = hour < 10 ? "0" + hour : hour;
+            min = min < 10 ? "0" + min : min;
+            sec = sec < 10 ? "0" + sec : sec;
+        
+            document.querySelector(".hour_num").innerText = hour;
+            document.querySelector(".min_num").innerText = min;
+            document.querySelector(".sec_num").innerText = sec;
+            document.querySelector(".am_pm").innerText = d;
+        
+          }, 1000); // 1000 milliseconds = 1s
+        
+          </script>
+        </body>
+        </html>
+        
+        
+      </textarea>
+      <button id="HTMLButton">Copy Codes</button>
+    </div>
+    <div class="text-box CSSBox">
+      <div class="topic">CSS Code:</div>
+      <textarea id="CSSBox" readonly >
+        /* Google fonts import link */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+  transition: all 0.4s ease;
+}
+section{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F0F8FF;
+  padding: 0 20px;
+}
+section.dark{
+  background: #24292D;
+}
+section .container{
+  display: flex;
+  align-items center;
+  justify-content: center;
+  height: 220px;
+  max-width: 560px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  position: relative;
+}
+section.dark .container{
+  background: #323840;
+}
+section .container .icons i{
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  height: 30px;
+  width: 30px;
+  background: #24292D;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+}
+section.dark .container .icons i{
+  background: #fff;
+  color: #323840;
+}
+.container .icons i.fa-sun{
+  opacity: 0;
+  pointer-events: none;
+}
+section.dark .container .icons i.fa-sun{
+  opacity: 1;
+  pointer-events: auto;
+  font-size: 16px;
+}
+section .container .time{
+  display: flex;
+  align-items: center;
+}
+.container .time .time-colon{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.time .time-colon .am_pm{
+  position: absolute;
+  top: 0;
+  right: -50px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+section.dark .time .time-colon .am_pm{
+  color: #fff;
+}
+.time .time-colon .time-text{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: #F0F8FF;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+section.dark .time .time-colon .time-text{
+  background: #24292D;
+}
+.time .time-colon .time-text,
+.time .time-colon .colon{
+  font-size: 35px;
+  font-weight: 600;
+}
+section.dark .time .time-text .num,
+section.dark .time .colon{
+  color: #fff;
+}
+.time .time-colon .colon{
+  font-size: 40px;
+  margin: 0 10px;
+}
+.time .time-colon .time-text .text{
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+section.dark  .time .time-colon .text{
+  color: #fff;
+}
+
+      </textarea>
+      <button id="CSSButton">Copy Codes</button>
+    </div>
+    
+
+  <script>
+  // HTML BOx JS Code
+    let HTMLBox = document.getElementById("HTMLBox");
+    let HTMLButton = document.getElementById("HTMLButton");
+
+    HTMLButton.onclick = function() {
+      HTMLBox.select();
+      document.execCommand("copy");
+      HTMLButton.innerText = "Codes Copied"
+    }
+
+    // CSS Box Js Code
+      let CSSBox = document.getElementById("CSSBox");
+      let CSSButton = document.getElementById("CSSButton");
+
+      CSSButton.onclick = function() {
+        CSSBox.select();
+        document.execCommand("copy");
+        CSSButton.innerText = "Codes Copied"
+      }
+   
+  </script>
+  <div class="or">
+    <h2>That’s all, now you’ve successfully created a Dynamic Clock using HTML,CSS & JavaScript<br> If your code doesn’t work or you’ve faced any error/problem,<br> please download the source code files from the given download button. <br>It’s free and a .zip file will be downloaded then you’ve to extract it.</h2>
+  </div>
+    <div class="download-container">
+      <a href="#" class="download-btn">Download Files <i class="fas fa-download"></i></a>
+      <div class="countdown"></div>
+      <div class="pleaseWait-text">Please wait..</div>
+      <div class="manualDownload-text">
+        If the download didn't start automatically, <a href="" class="manualDownload-link">click here.</a>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    const downloadBtn = document.querySelector(".download-btn");
+    const countdown = document.querySelector(".countdown");
+    const pleaseWaitText = document.querySelector(".pleaseWait-text");
+    const manualDownloadText = document.querySelector(".manualDownload-text");
+    const manualDownloadLink = document.querySelector(".manualDownload-link");
+    var timeLeft = 10;
+
+    downloadBtn.addEventListener("click", () => {
+      downloadBtn.style.display = "none";
+      countdown.innerHTML = "Download will begin automatically in <span>" + timeLeft + "</span> seconds."; //for quick start of countdown
+
+      var downloadTimer = setInterval(function timeCount(){
+        timeLeft -= 1;
+        countdown.innerHTML = "Download will begin automatically in <span>" + timeLeft + "</span> seconds.";
+
+        if(timeLeft <= 0){
+          clearInterval(downloadTimer);
+          pleaseWaitText.style.display = "block";
+          let download_href = "C:/Users/ajaye/Downloads/Dynamic Digital Clock.zip";
+          window.location.href = download_href;
+          manualDownloadLink.href = download_href;
+
+          setTimeout(() => {
+            pleaseWaitText.style.display = "none";
+            manualDownloadText.style.display = "block";
+          }, 4000);
+        }
+      }, 1000);
+    });
+    </script>
+
+</body>
+</html>

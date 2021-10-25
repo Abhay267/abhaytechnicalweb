@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Skill Bar Source Code</title>
+    <link rel="stylesheet" href="skill bar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="icon" href="favicon-32x32.png">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="heading">
+    <h2>Source Code for Skill Bar</h2>
+  </div>
+  <div class="img">
+    <img src="Skill Bar.jpg" alt="">
+  </div>
+  <div class="text-boxes">
+    <div class="text-box HTMLBox">
+      <div class="topic">HTML Code:</div>
+      <textarea id="HTMLBox" readonly >
+        <!DOCTYPE html>
+        <!-- Created By AbhayTechnical -->
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Animated Skills Bar | Abhaytechnical</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+          <div class="skill-bars">
+            <div class="bar">
+              <div class="info">
+                <span>HTML</span>
+              </div>
+              <div class="progress-line html">
+                <span></span>
+              </div>
+            </div>
+            <div class="bar">
+              <div class="info">
+                <span>CSS</span>
+              </div>
+              <div class="progress-line css">
+                <span></span>
+              </div>
+            </div>
+            <div class="bar">
+              <div class="info">
+                <span>jQuery</span>
+              </div>
+              <div class="progress-line jquery">
+                <span></span>
+              </div>
+            </div>
+            <div class="bar">
+              <div class="info">
+                <span>Python</span>
+              </div>
+              <div class="progress-line python">
+                <span></span>
+              </div>
+            </div>
+            <div class="bar">
+              <div class="info">
+                <span>MySQL</span>
+              </div>
+              <div class="progress-line mysql">
+                <span></span>
+              </div>
+            </div>
+          </div>
+        
+        </body>
+        </html>
+      </textarea>
+      <button id="HTMLButton">Copy Codes</button>
+    </div>
+    <div class="text-box CSSBox">
+      <div class="topic">CSS Code:</div>
+      <textarea id="CSSBox" readonly >
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #6665ee;
+}
+::selection{
+  color: #fff;
+  background: #6665ee;
+}
+.skill-bars{
+  padding: 25px 30px;
+  width: 600px;
+  background: #fff;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+.skill-bars .bar{
+  margin: 20px 0;
+}
+.skill-bars .bar:first-child{
+  margin-top: 0px;
+}
+.skill-bars .bar .info{
+  margin-bottom: 5px;
+}
+.skill-bars .bar .info span{
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line{
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+              0 1px rgba(255,255,255,0.8);
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span{
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #6665ee;
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar .progress-line.html span{
+  width: 90%;
+}
+.bar .progress-line.css span{
+  width: 60%;
+}
+.bar .progress-line.jquery span{
+  width: 85%;
+}
+.bar .progress-line.python span{
+  width: 50%;
+}
+.bar .progress-line.mysql span{
+  width: 75%;
+}
+.progress-line span::before{
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100%{
+    opacity: 1;
+  }
+}
+.progress-line.html span::after{
+  content: "90%";
+}
+.progress-line.css span::after{
+  content: "60%";
+}
+.progress-line.jquery span::after{
+  content: "85%";
+}
+.progress-line.python span::after{
+  content: "50%";
+}
+.progress-line.mysql span::after{
+  content: "75%";
+}
+      </textarea>
+      <button id="CSSButton">Copy Codes</button>
+    </div>
+    
+
+  <script>
+  // HTML BOx JS Code
+    let HTMLBox = document.getElementById("HTMLBox");
+    let HTMLButton = document.getElementById("HTMLButton");
+
+    HTMLButton.onclick = function() {
+      HTMLBox.select();
+      document.execCommand("copy");
+      HTMLButton.innerText = "Codes Copied"
+    }
+
+    // CSS Box Js Code
+      let CSSBox = document.getElementById("CSSBox");
+      let CSSButton = document.getElementById("CSSButton");
+
+      CSSButton.onclick = function() {
+        CSSBox.select();
+        document.execCommand("copy");
+        CSSButton.innerText = "Codes Copied"
+      }
+   
+  </script>
+  <div class="or">
+    <h2>That’s all, now you’ve successfully created a Skill Bar using HTML& CSS.<br> If your code doesn’t work or you’ve faced any error/problem,<br> please download the source code files from the given download button. <br>It’s free and a .zip file will be downloaded then you’ve to extract it.</h2>
+  </div>
+    <div class="download-container">
+      <a href="#" class="download-btn">Download Files <i class="fas fa-download"></i></a>
+      <div class="countdown"></div>
+      <div class="pleaseWait-text">Please wait..</div>
+      <div class="manualDownload-text">
+        If the download didn't start automatically, <a href="" class="manualDownload-link">click here.</a>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    const downloadBtn = document.querySelector(".download-btn");
+    const countdown = document.querySelector(".countdown");
+    const pleaseWaitText = document.querySelector(".pleaseWait-text");
+    const manualDownloadText = document.querySelector(".manualDownload-text");
+    const manualDownloadLink = document.querySelector(".manualDownload-link");
+    var timeLeft = 10;
+
+    downloadBtn.addEventListener("click", () => {
+      downloadBtn.style.display = "none";
+      countdown.innerHTML = "Download will begin automatically in <span>" + timeLeft + "</span> seconds."; //for quick start of countdown
+
+      var downloadTimer = setInterval(function timeCount(){
+        timeLeft -= 1;
+        countdown.innerHTML = "Download will begin automatically in <span>" + timeLeft + "</span> seconds.";
+
+        if(timeLeft <= 0){
+          clearInterval(downloadTimer);
+          pleaseWaitText.style.display = "block";
+          let download_href = "C:/Users/ajaye/Downloads/Skill Bars.zip";
+          window.location.href = download_href;
+          manualDownloadLink.href = download_href;
+
+          setTimeout(() => {
+            pleaseWaitText.style.display = "none";
+            manualDownloadText.style.display = "block";
+          }, 4000);
+        }
+      }, 1000);
+    });
+    </script>
+
+</body>
+</html>

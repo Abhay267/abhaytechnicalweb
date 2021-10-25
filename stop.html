@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Stop Watch Source Code</title>
+    <link rel="stylesheet" href="stop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="icon" href="favicon-32x32.png">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="heading">
+    <h2>Source Code for Stopwatch</h2>
+  </div>
+  <div class="img">
+    <img src="stop.png" alt="">
+  </div>
+  <div class="text-boxes">
+    <div class="text-box HTMLBox">
+      <div class="topic">HTML Code:</div>
+      <textarea id="HTMLBox" readonly >
+        <!DOCTYPE html>
+        <!--Created By Abhaytechnical-->
+        <html lang="en" dir="ltr">
+          <head>
+            <meta charset="UTF-8">
+           <!-- <title> Stopwatch Timer application | AbhayTechnical </title>-->
+            <link rel="stylesheet" href="style.css">
+           </head>
+        <body>
+          <div class="wrapper">
+            <div class="time">
+              <span class="hour">00</span>
+              <span class="colon">:</span>
+              <span class="minute">00</span>
+              <span class="colon">:</span>
+              <span class="second">00</span>
+              <span class="colon ms-colon">:</span>
+              <span class="millisecond">00</span>
+            </div>
+            <div class="buttons">
+              <button class="start">Start</button>
+              <button class="stop">Stop</button>
+              <button class="reset">Reset</button>
+            </div>
+          </div>
+          
+          <script>
+          let hr = min = sec = ms = "0" + 0,
+            startTimer;
+        
+          const startBtn = document.querySelector(".start"),
+           stopBtn = document.querySelector(".stop"),
+           resetBtn = document.querySelector(".reset");
+        
+           startBtn.addEventListener("click", start);
+           stopBtn.addEventListener("click", stop);
+           resetBtn.addEventListener("click", reset);
+        
+          function start() {
+            startBtn.classList.add("active");
+            stopBtn.classList.remove("stopActive");
+        
+            startTimer = setInterval(()=>{
+              ms++
+              ms = ms < 10 ? "0" + ms : ms;
+        
+              if(ms == 100){
+                sec++;
+                sec = sec < 10 ? "0" + sec : sec;
+                ms = "0" + 0;
+              }
+              if(sec == 60){
+                min++;
+                min = min < 10 ? "0" + min : min;
+                sec = "0" + 0;
+              }
+              if(min == 60){
+                hr++;
+                hr = hr < 10 ? "0" + hr : hr;
+                min = "0" + 0;
+              }
+              putValue();
+            },10); //1000ms = 1s
+        
+          }
+        
+          function stop() {
+            startBtn.classList.remove("active");
+            stopBtn.classList.add("stopActive");
+            clearInterval(startTimer);
+          }
+          function reset() {
+            startBtn.classList.remove("active");
+            stopBtn.classList.remove("stopActive");
+            clearInterval(startTimer);
+            hr = min = sec = ms = "0" + 0;
+            putValue();
+          }
+        
+          function putValue() {
+            document.querySelector(".millisecond").innerText = ms;
+            document.querySelector(".second").innerText = sec;
+            document.querySelector(".minute").innerText = min;
+            document.querySelector(".hour").innerText = hr;
+          }
+         </script>
+        </body>
+        </html>
+        
+      </textarea>
+      <button id="HTMLButton">Copy Codes</button>
+    </div>
+    <div class="text-box CSSBox">
+      <div class="topic">CSS Code:</div>
+      <textarea id="CSSBox" readonly >
+        /* Google fonts import link */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Poppins',sans-serif;
+        }
+        body{
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #7D2Ae8;
+        }
+        .wrapper{
+          user-select: none;
+        }
+        .wrapper .time{
+          height: 100px;
+          background: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 6px;
+          box-shadow: 10px 10px 20px rgba(0,0,0,0.09);
+          padding: 0 10px;
+        }
+        .wrapper .time span{
+          width: 100px;
+          text-align: center;
+          font-size: 50px;
+          font-weight: 500;
+          color: #333;
+        }
+        .time span.colon{
+          width: 10px;
+        }
+        .time span.ms-colon,
+        .time span.millisecond{
+          color: #7D2Ae8;
+        }
+        .wrapper .buttons{
+          text-align: center;
+          margin-top: 20px;
+        }
+        .buttons button{
+          padding: 6px 16px;
+          outline: none;
+          border: none;
+          margin: 0 5px;
+          color: #7D2Ae8;
+          background: #fff;
+          font-size: 19px;
+          font-weight: 500;
+          border-radius: 4px;
+          cursor: pointer;
+          box-shadow: 10px 10px 20px rgba(0,0,0,0.09);
+        }
+        .buttons button.active,
+        .buttons button.stopActive{
+          pointer-events: none;
+          opacity: 0.7;
+        }
+        
+      </textarea>
+      <button id="CSSButton">Copy Codes</button>
+    </div>
+    
+
+  <script>
+  // HTML BOx JS Code
+    let HTMLBox = document.getElementById("HTMLBox");
+    let HTMLButton = document.getElementById("HTMLButton");
+
+    HTMLButton.onclick = function() {
+      HTMLBox.select();
+      document.execCommand("copy");
+      HTMLButton.innerText = "Codes Copied"
+    }
+
+    // CSS Box Js Code
+      let CSSBox = document.getElementById("CSSBox");
+      let CSSButton = document.getElementById("CSSButton");
+
+      CSSButton.onclick = function() {
+        CSSBox.select();
+        document.execCommand("copy");
+        CSSButton.innerText = "Codes Copied"
+      }
+   
+  </script>
+  <div class="or">
+    <h2>That’s all, now you’ve successfully created a Stopwatch using HTML,CSS & javascript.<br> If your code doesn’t work or you’ve faced any error/problem,<br> please download the source code files from the given download button. <br>It’s free and a .zip file will be downloaded then you’ve to extract it.</h2>
+  </div>
+    <div class="download-container">
+      <a href="#" class="download-btn">Download Files <i class="fas fa-download"></i></a>
+      <div class="countdown"></div>
+      <div class="pleaseWait-text">Please wait..</div>
+      <div class="manualDownload-text">
+        If the download didn't start automatically, <a href="" class="manualDownload-link">click here.</a>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    const downloadBtn = document.querySelector(".download-btn");
+    const countdown = document.querySelector(".countdown");
+    const pleaseWaitText = document.querySelector(".pleaseWait-text");
+    const manualDownloadText = document.querySelector(".manualDownload-text");
+    const manualDownloadLink = document.querySelector(".manualDownload-link");
+    var timeLeft = 10;
+
+    downloadBtn.addEventListener("click", () => {
+      downloadBtn.style.display = "none";
+      countdown.innerHTML = "Download will begin automatically in <span>" + timeLeft + "</span> seconds."; //for quick start of countdown
+
+      var downloadTimer = setInterval(function timeCount(){
+        timeLeft -= 1;
+        countdown.innerHTML = "Download will begin automatically in <span>" + timeLeft + "</span> seconds.";
+
+        if(timeLeft <= 0){
+          clearInterval(downloadTimer);
+          pleaseWaitText.style.display = "block";
+          let download_href = "C:/Users/ajaye/Downloads/Stopwatch Application.zip";
+          window.location.href = download_href;
+          manualDownloadLink.href = download_href;
+
+          setTimeout(() => {
+            pleaseWaitText.style.display = "none";
+            manualDownloadText.style.display = "block";
+          }, 4000);
+        }
+      }, 1000);
+    });
+    </script>
+
+</body>
+</html>

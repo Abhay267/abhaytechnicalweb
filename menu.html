@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Navigation Menu Hover Animation Source Code</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="icon" href="favicon-32x32.png">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="heading">
+    <h2>Source Code for Navigation Menu Hover Animation</h2>
+  </div>
+  <div class="img">
+    <img src="Menu Hover.jpg" alt="">
+  </div>
+  <div class="text-boxes">
+    <div class="text-box HTMLBox">
+      <div class="topic">HTML Code:</div>
+      <textarea id="HTMLBox" readonly >
+        <!DOCTYPE html>
+        <!-- Created by AbhayTecnical-->
+        <html lang="en" dir="ltr">
+          <head>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" href="style.css">
+           </head>
+        <body>
+          <ul class="nav-links">
+            <li><a href="#">Dashboard</a></li>
+            <li class="center"><a href="#">Portfolio</a></li>
+            <li class="upward"><a href="#">Services</a></li>
+            <li class="forward"><a href="#">Feedback</a></li>
+          </ul>
+        
+        </body>
+        </html>
+        
+        
+      </textarea>
+      <button id="HTMLButton">Copy Codes</button>
+    </div>
+    <div class="text-box CSSBox">
+      <div class="topic">CSS Code:</div>
+      <textarea id="CSSBox" readonly >
+        /* Google Fonts Import Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #c1f7f5;
+}
+.nav-links{
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 20px 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.nav-links li{
+  list-style: none;
+  margin: 0 12px;
+}
+.nav-links li a{
+  position: relative;
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 6px 0;
+  text-decoration: none;
+}
+.nav-links li a:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: #34efdf;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+.nav-links li a:hover:before{
+  width: 100%;
+}
+.nav-links li.center a:before{
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav-links li.upward a:before{
+  width: 100%;
+  bottom: -5px;
+  opacity: 0;
+}
+.nav-links li.upward a:hover:before{
+  bottom: 0px;
+  opacity: 1;
+}
+.nav-links li.forward a:before{
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+.nav-links li.forward a:hover:before{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+      </textarea>
+      <button id="CSSButton">Copy Codes</button>
+    </div>
+    
+
+  <script>
+  // HTML BOx JS Code
+    let HTMLBox = document.getElementById("HTMLBox");
+    let HTMLButton = document.getElementById("HTMLButton");
+
+    HTMLButton.onclick = function() {
+      HTMLBox.select();
+      document.execCommand("copy");
+      HTMLButton.innerText = "Codes Copied"
+    }
+
+    // CSS Box Js Code
+      let CSSBox = document.getElementById("CSSBox");
+      let CSSButton = document.getElementById("CSSButton");
+
+      CSSButton.onclick = function() {
+        CSSBox.select();
+        document.execCommand("copy");
+        CSSButton.innerText = "Codes Copied"
+      }
+   
+  </script>
+  <div class="or">
+    <h2>That’s all, now you’ve successfully created a Navigation Menu Hover using HTML &CSS<br> If your code doesn’t work or you’ve faced any error/problem,<br> please download the source code files from the given download button. <br>It’s free and a .zip file will be downloaded then you’ve to extract it.</h2>
+  </div>
+    <div class="download-container">
+      <a href="#" class="download-btn">Download Files <i class="fas fa-download"></i></a>
+      <div class="countdown"></div>
+      <div class="pleaseWait-text">Please wait..</div>
+      <div class="manualDownload-text">
+        If the download didn't start automatically, <a href="" class="manualDownload-link">click here.</a>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    const downloadBtn = document.querySelector(".download-btn");
+    const countdown = document.querySelector(".countdown");
+    const pleaseWaitText = document.querySelector(".pleaseWait-text");
+    const manualDownloadText = document.querySelector(".manualDownload-text");
+    const manualDownloadLink = document.querySelector(".manualDownload-link");
+    var timeLeft = 10;
+
+    downloadBtn.addEventListener("click", () => {
+      downloadBtn.style.display = "none";
+      countdown.innerHTML = "Download will begin automatically in <span>" + timeLeft + "</span> seconds."; //for quick start of countdown
+
+      var downloadTimer = setInterval(function timeCount(){
+        timeLeft -= 1;
+        countdown.innerHTML = "Download will begin automatically in <span>" + timeLeft + "</span> seconds.";
+
+        if(timeLeft <= 0){
+          clearInterval(downloadTimer);
+          pleaseWaitText.style.display = "block";
+          let download_href = "C:/Users/ajaye/Downloads/Navigation Menu Hover Animation.zip";
+          window.location.href = download_href;
+          manualDownloadLink.href = download_href;
+
+          setTimeout(() => {
+            pleaseWaitText.style.display = "none";
+            manualDownloadText.style.display = "block";
+          }, 4000);
+        }
+      }, 1000);
+    });
+    </script>
+
+</body>
+</html>

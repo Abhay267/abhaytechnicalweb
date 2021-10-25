@@ -1,0 +1,258 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-500, initial-scale=1.0">
+  <title>AbhayTechnical | creative coding</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="test.css">
+  <script src="https://kit.fontawesome.com/619df99a76.js"></script>
+  <link rel="icon" href="favicon-32x32.png">
+</head>
+
+<body>
+  <div class="loader_bg">
+    <div class="loader"></div>
+  </div>
+
+  <header>
+    <div class="wo">
+      <img src="Abhaytechnicalweb.png" alt="">
+    </div>
+    <nav>
+      <div class="menu">
+        <ul>
+          <li><a href="#duggan" class="op">
+              <h3>HOME</h3>
+            </a></li>
+          <li><a href="#servicediv" class="nobita">
+              <h3>SERVICES</h3>
+            </a></li>
+          <li><a href="#sourcediv" class="gian">
+              <h3>SOURCECODE</h3>
+            </a></li>
+          <li><a href="#contactdiv" class="suneo">
+              <h3>CONTACTUS</h3>
+            </a></li>
+        </ul>
+      </div>
+      </div>
+    </nav>
+  </header>
+  <div class="clippath">
+    <div id="duggan">
+      <div class="hen">
+        <h1>WELCOME TO ABHAYTECHNICAL</h1>
+        <h2>ABOUT ME</h2>
+      </div>
+      <div class="container">
+        <p> A Website For <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+      </div>
+    </div>
+    <script>
+      const typedTextSpan = document.querySelector(".typed-text");
+      const cursorSpan = document.querySelector(".cursor");
+
+      const textArray = ["Python", "Node js", "jQuery", "PHP", "Javascript", "Mysql", "Database"];
+      const typingDelay = 100;
+      const erasingDelay = 50;
+      const newTextDelay = 1000; // Delay between current and next text
+      let textArrayIndex = 0;
+      let charIndex = 0;
+
+      function type() {
+        if (charIndex < textArray[textArrayIndex].length) {
+          if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+          typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(type, typingDelay);
+        } else {
+          cursorSpan.classList.remove("typing");
+          setTimeout(erase, newTextDelay);
+        }
+      }
+
+      function erase() {
+        if (charIndex > 0) {
+          if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+          typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+          charIndex--;
+          setTimeout(erase, erasingDelay);
+        } else {
+          cursorSpan.classList.remove("typing");
+          textArrayIndex++;
+          if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+          setTimeout(type, typingDelay + 1100);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () { // On DOM Load initiate the effect
+        if (textArray.length) setTimeout(type, newTextDelay + 250);
+      });
+    </script>
+    <div class="social-menu">
+      <ul>
+        <li><a href="https://twitter.com/AbhayRa51355043" target="blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/abhayrathore267/" target="blank"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UC2e9qzYwSAXTgFWfEPTA3gQ" target="blank"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/abhay-rathore-7a2ab7223/" target="blank"><i
+              class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="servicediv" class="fixed">
+    <div class="services" data-aos="fade-up" data-aos-delay="5000">
+      <h1>Our Services</h1>
+      <div class="cen">
+        <div class="service">
+          <i class="fas fa-laptop-code"></i>
+          <h2>Web Development</h2>
+          <p>In This Website You Can Learn and Make the awesome and beautiful Website like me.</p>
+        </div>
+
+        <div class="service">
+          <i class="fas fa-chart-line"></i>
+          <h2>Marketing</h2>
+          <p>from This Website Your Website Can Famous In The market And Can Earn Good Money.</p>
+        </div>
+
+        <div class="service">
+          <i class="fas fa-database"></i>
+          <h2>Database</h2>
+          <p>In this website you can learn best way to collect the information or Data For Your Website.<p>
+        </div>
+
+        <div class="service">
+          <i class="fas fa-palette"></i>
+          <h2>Graphics</h2>
+          <p>In this Website you can learn Beautiful and famous Graphics For your website.</p>
+        </div>
+
+        <div class="service">
+          <i class="fas fa-mobile"></i>
+          <h2>App Development</h2>
+          <p>In this Website You can learn the best way to make apps for Mobile.</p>
+        </div>
+
+        <div class="service">
+          <i class="fas fa-utensils"></i>
+          <h2>Tecnical Article</h2>
+          <p>We write articles on current and Interesting Technicals Topic to spread knowledge.</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <section class="no" id="sourcediv">
+      <h1>Source Code</h1>
+      <div class="slider" data-aos="fade-right">
+        <img src="Screenshot 2021-10-10 193549.png" alt="">
+        <h1>Slider Login Page</h1>
+        <p>The Source Code Of This 'slider Login Page'</p>
+        <a href="slider.html" target="blank">Click Here👈</a>
+      </div>
+      <div class="social" data-aos="fade-left">
+        <img src="Screenshot 2021-10-10 214159.png" alt="social">
+        <h1>Social Icons </h1>
+        <p>The Source Code Of This 'Social Icons'</p>
+        <a href="social.html" target="blank">Click Here👈</a>
+      </div>
+      <button type="button" class="seemore"><a href="source.html" target="blank">See More</a></button>
+      <hr>
+      <section class="allows" id="contactdiv">
+        <div class="JKL">
+          <h1>GET IN TOUCH</h1>
+          <p>Feel Free to drop us a line to contact us</p>
+        </div>
+        <div class="master">
+          <div class="information" data-aos="fade-right" data-aos-offset="50">
+            <h2>Feel Free To Contact</h2>
+            <p>Hello Everyone! Have a great day :) I am here to help<br> you. If you want to know something or you have
+              any<br> suggestion then please mail me. Thank You.</p>
+          </div>
+          <div class="place" data-aos="fade-right" data-aos-offset="50">
+            <i class="fas fa-map" style="user-select: auto;"></i>
+            <h4>Rajnagar Ext,Ghaziabad,Up </h4>
+          </div>
+          <div class="phone" data-aos="fade-right" data-aos-offset="50">
+            <i class="fas fa-phone-alt"></i>
+            <h4>+91 8920286851</h4>
+          </div>
+          <div class="email" data-aos="fade-right" data-aos-offset="50">
+            <i class="fas fa-envelope"></i>
+            <h4>abhaytechnical267@gmail.com</h4>
+          </div>
+          <div class="website" data-aos="fade-right" data-aos-offset="50">
+            <i class="fas fa-globe-asia"></i>
+            <h4>www.Abhaytechnical.com</h4>
+          </div>
+        </div>
+        <div class="dfg" data-aos="fade-left" data-aos-offset="50">
+          <form action="mailto:abhayrathore267@gmail.com" method="POST" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" name="SenderName" required>
+            <label for="email">Email:</label>
+            <input type="email" name="SenderEmail" required>
+            <label for="subject">Subject:</label>
+            <input type="text" name="SenderSubject" required>
+            <label for="message">Message</label>
+            <textarea name="SenderMessage" cols="15" rows="4" required></textarea>
+            <input type="submit" value="Send">
+          </form>
+        </div>
+        <button id="topbtn"><i class="fas fa-angle-up"></i></button>
+        <footer>
+          <div class="footer-content">
+            <h3>AbhayTechnical</h3>
+            <p>AbhayTechnical is a blog where we post blogs related to HTML CSS JavaScript <br>& PHP along with creative coding stuff.</p>
+          <ul class="yu">
+          <li><a href="https://twitter.com/AbhayRa51355043" target="blank""><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/abhayrathore267/" target="blank""><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.youtube.com/channel/UC2e9qzYwSAXTgFWfEPTA3gQ" target="blank""><i class="fab fa-youtube"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/abhay-rathore-7a2ab7223/" target="blank""><i class="fab fa-linkedin"></i></a></li>
+          </ul>
+          </div>
+          <div class="footer-bottom">
+            <p>Copyright © 2021-2022 AbhayTechnical. All Rights Reserved</p>
+          </div>
+        </footer>
+      </section>
+    </section>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    setTimeout(function () {
+      $('.loader_bg').fadeToggle();
+    }, 3500);
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 200,
+      duration: 950,
+      once: true,
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 40) {
+          $('#topbtn').fadeIn();
+        } else {
+          $('#topbtn').fadeOut();
+        }
+      });
+      $("#topbtn").click(function () {
+        $('html ,body').animate({
+          scrollTop: 0
+        }, 800)
+      })
+    })
+  </script>
+</body>
+
+</html>
